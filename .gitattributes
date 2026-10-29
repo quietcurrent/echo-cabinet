@@ -1,0 +1,6 @@
+* text=auto eol=lf
+vendor/** -text
+models/** -text
+*.png binary
+*.onnx binary
+*.wasm binary
