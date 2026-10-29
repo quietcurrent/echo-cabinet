@@ -20,7 +20,9 @@
   },
   "offline_after_fresh_load":{"passed":true,"procedure":"Clear only app caches/registration; fresh page and model load; disable browser network; reload page; initialize model again; search.","query":"a voyage brought safely into harbour","top1":"The keeper’s log","cosine":0.385,"navigator_online":false},
   "local_import":{"passed":true,"files":2,"top1":"synthetic-beacon.txt","exact_source_quote":true,"html_payload_executed":false,"oversized_rejected":true,"previous_archive_preserved":true,"restore_eight_samples":true},
+  "ambiguous_query":{"query":"an unfinished goodbye","top1":"An empty theatre","top1_cosine":0.309,"other_results":[{"title":"The last train west","cosine":0.295},{"title":"The blue envelope","cosine":0.295}],"observation":"The anticipated waiting letter was third. The top match is not a verified interpretation of the query."},
   "network":{"observed_external_requests":[],"scope":"Tested initialization, search and local import; no claim about the static host’s own logs."},
   "layout":{"desktop_reviewed":true,"mobile_width_px":390,"mobile_horizontal_overflow":false},
+  "production":{"url":"https://quietcurrent.github.io/echo-cabinet/","tested_functional_source_commit":"2b6a284412335a078f24bb1b8005aa06474f28cb","online_top1":"The keeper’s log","offline_reload_and_search_passed":true,"offline_top1":"The keeper’s log","online_and_offline_cosine":0.385,"observed_http_requests":53,"external_requests":[],"non_get_requests":[]},
   "limitations":"Timing is rounded from UI output and device-specific. Offline cache depends on browser support/storage availability. No cross-browser or independent retrieval benchmark was performed."
 }

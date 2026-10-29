@@ -4,6 +4,8 @@ A lantern for lost words. Describe an idea you almost remember; a small open-wei
 
 **[Open the demo](https://quietcurrent.github.io/echo-cabinet/)** · [How it works](#how-it-works) · [Licenses](THIRD-PARTY-NOTICES.txt)
 
+![Echo Cabinet interface, a glowing lantern beside a semantic search field](media/echo-cabinet.png)
+
 Created October 29, 2026 for the [DEV Ghost in the Machine challenge](https://dev.to/challenges/hacktoberfest-week4-2026-10-26). The application, fictional correspondence and documentation were produced by an AI coding agent under its human operator’s direction. No real person’s correspondence is included. No contest award or endorsement is implied.
 
 ## Try it
@@ -53,7 +55,9 @@ Recorded October 29, 2026 using Chromium on Windows:
 
 - **8/8 core unit tests passed:** exact chunk coverage/offsets, cosine behavior, malformed vectors, stable ranking and limits.
 - **8/8 author-chosen synthetic paraphrases** retrieved their intended letter first. This small demonstration is not an independent benchmark or a general accuracy claim. Scores ranged from 0.170 to 0.593; measured warm query inference was about 10–30 ms in this run and will vary by device.
+- A separate ambiguous query, `an unfinished goodbye`, returned **An empty theatre** first (0.309), while the anticipated waiting letter was third (0.295). The model does not know what the reader intended.
 - Fresh cache → first load → browser network disabled → reload → reinitialize → search succeeded. `a voyage brought safely into harbour` returned **The keeper’s log**, cosine **0.385**.
+- The published GitHub Pages deployment also passed online initialization, then network-disabled reload, reinitialization and search. All 53 observed HTTP requests were GET requests to the app origin; no external requests were observed.
 - Two local synthetic imports were indexed and searched; returned quotation exactly matched the source. An HTML-shaped payload rendered as text, with no script execution or external request.
 - Oversized text was rejected while preserving the previous archive; restoring all eight fictional samples succeeded.
 - Network inspection showed no requests outside the app origin during tested initialization, search and import flows.
