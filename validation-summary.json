@@ -1,0 +1,26 @@
+{
+  "date_utc": "2026-10-29",
+  "performed_by": "AI coding agent",
+  "environment": "Chromium on Windows; local static HTTP host; WASM one thread",
+  "core_tests": {"passed":8,"failed":0,"command":"node --test search-core.test.mjs"},
+  "retrieval_demonstration": {
+    "note": "Eight author-chosen synthetic paraphrases, not an independent or general accuracy benchmark. Exact displayed cosine scores rounded to3decimals.",
+    "top1":8,
+    "total":8,
+    "cases":[
+      {"query":"a dangerous voyage guided into port","expected":"The keeper’s log","actual":"The keeper’s log","cosine":0.303,"warm_query_ms":30},
+      {"query":"a meal shared with an absent sibling","expected":"The blue envelope","actual":"The blue envelope","cosine":0.301,"warm_query_ms":20},
+      {"query":"a craftsman saves a timepiece to remember his father","expected":"The stopped clock","actual":"The stopped clock","cosine":0.410,"warm_query_ms":20},
+      {"query":"returning to a stage many years after a first performance","expected":"An empty theatre","actual":"An empty theatre","cosine":0.365,"warm_query_ms":30},
+      {"query":"moving away from home to start a new life","expected":"The last train west","actual":"The last train west","cosine":0.170,"warm_query_ms":20},
+      {"query":"nurturing plants beneath the frost","expected":"A winter garden","actual":"A winter garden","cosine":0.464,"warm_query_ms":10},
+      {"query":"hearing someone speak through wireless static","expected":"The midnight frequency","actual":"The midnight frequency","cosine":0.514,"warm_query_ms":20},
+      {"query":"repairing a jacket with a needle to help a coworker","expected":"The red thread","actual":"The red thread","cosine":0.593,"warm_query_ms":30}
+    ]
+  },
+  "offline_after_fresh_load":{"passed":true,"procedure":"Clear only app caches/registration; fresh page and model load; disable browser network; reload page; initialize model again; search.","query":"a voyage brought safely into harbour","top1":"The keeper’s log","cosine":0.385,"navigator_online":false},
+  "local_import":{"passed":true,"files":2,"top1":"synthetic-beacon.txt","exact_source_quote":true,"html_payload_executed":false,"oversized_rejected":true,"previous_archive_preserved":true,"restore_eight_samples":true},
+  "network":{"observed_external_requests":[],"scope":"Tested initialization, search and local import; no claim about the static host’s own logs."},
+  "layout":{"desktop_reviewed":true,"mobile_width_px":390,"mobile_horizontal_overflow":false},
+  "limitations":"Timing is rounded from UI output and device-specific. Offline cache depends on browser support/storage availability. No cross-browser or independent retrieval benchmark was performed."
+}

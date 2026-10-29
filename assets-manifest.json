@@ -1,0 +1,128 @@
+{
+  "project": "Echo Cabinet",
+  "generated_at_utc": "2026-10-29T15:18:36.027872+00:00",
+  "transformers_js_version": "3.8.1",
+  "onnxruntime_web_version": "1.22.0-dev.20250409-89f8206ba4",
+  "model": "Xenova/all-MiniLM-L6-v2",
+  "model_revision": "751bff37182d3f1213fa05d7196b954e230abad9",
+  "model_license": "Apache-2.0",
+  "notes": [
+    "Downloaded as static bytes only; no downloaded code executed.",
+    "JavaScript/WASM SHA-256 values checked against jsDelivr package metadata; model SHA-256 checked against Hugging Face LFS metadata.",
+    "Other assets have recorded SHA-256 and pinned source URLs."
+  ],
+  "assets": [
+    {
+      "path": "vendor/transformers.min.js",
+      "source_url": "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/dist/transformers.min.js",
+      "bytes": 888173,
+      "sha256": "aa5002b70e789798da263f5f99c62bd3e8fcd0c119258a493c40c180648365fa",
+      "expected_size_verified": true,
+      "expected_sha256_verified": true
+    },
+    {
+      "path": "vendor/ort-wasm-simd-threaded.jsep.mjs",
+      "source_url": "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/dist/ort-wasm-simd-threaded.jsep.mjs",
+      "bytes": 44484,
+      "sha256": "08fb86ec433c78bfb032c5d84a68b8e8e5a8d81268fa39e24314179a5767a5b9",
+      "expected_size_verified": true,
+      "expected_sha256_verified": true
+    },
+    {
+      "path": "vendor/ort-wasm-simd-threaded.jsep.wasm",
+      "source_url": "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/dist/ort-wasm-simd-threaded.jsep.wasm",
+      "bytes": 21596019,
+      "sha256": "c46655e8a94afc45338d4cb2b840475f88e5012d524509916e505079c00bfa39",
+      "expected_size_verified": true,
+      "expected_sha256_verified": true
+    },
+    {
+      "path": "models/Xenova/all-MiniLM-L6-v2/config.json",
+      "source_url": "https://huggingface.co/Xenova/all-MiniLM-L6-v2/resolve/751bff37182d3f1213fa05d7196b954e230abad9/config.json",
+      "bytes": 650,
+      "sha256": "7135149f7cffa1a573466c6e4d8423ed73b62fd2332c575bf738a0d033f70df7",
+      "expected_size_verified": true,
+      "expected_sha256_verified": false
+    },
+    {
+      "path": "models/Xenova/all-MiniLM-L6-v2/tokenizer.json",
+      "source_url": "https://huggingface.co/Xenova/all-MiniLM-L6-v2/resolve/751bff37182d3f1213fa05d7196b954e230abad9/tokenizer.json",
+      "bytes": 711661,
+      "sha256": "da0e79933b9ed51798a3ae27893d3c5fa4a201126cef75586296df9b4d2c62a0",
+      "expected_size_verified": true,
+      "expected_sha256_verified": false
+    },
+    {
+      "path": "models/Xenova/all-MiniLM-L6-v2/tokenizer_config.json",
+      "source_url": "https://huggingface.co/Xenova/all-MiniLM-L6-v2/resolve/751bff37182d3f1213fa05d7196b954e230abad9/tokenizer_config.json",
+      "bytes": 366,
+      "sha256": "9261e7d79b44c8195c1cada2b453e55b00aeb81e907a6664974b4d7776172ab3",
+      "expected_size_verified": true,
+      "expected_sha256_verified": false
+    },
+    {
+      "path": "models/Xenova/all-MiniLM-L6-v2/special_tokens_map.json",
+      "source_url": "https://huggingface.co/Xenova/all-MiniLM-L6-v2/resolve/751bff37182d3f1213fa05d7196b954e230abad9/special_tokens_map.json",
+      "bytes": 125,
+      "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+      "expected_size_verified": true,
+      "expected_sha256_verified": false
+    },
+    {
+      "path": "models/Xenova/all-MiniLM-L6-v2/vocab.txt",
+      "source_url": "https://huggingface.co/Xenova/all-MiniLM-L6-v2/resolve/751bff37182d3f1213fa05d7196b954e230abad9/vocab.txt",
+      "bytes": 231508,
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+      "expected_size_verified": true,
+      "expected_sha256_verified": false
+    },
+    {
+      "path": "models/Xenova/all-MiniLM-L6-v2/onnx/model_quantized.onnx",
+      "source_url": "https://huggingface.co/Xenova/all-MiniLM-L6-v2/resolve/751bff37182d3f1213fa05d7196b954e230abad9/onnx/model_quantized.onnx",
+      "bytes": 22972370,
+      "sha256": "afdb6f1a0e45b715d0bb9b11772f032c399babd23bfc31fed1c170afc848bdb1",
+      "expected_size_verified": true,
+      "expected_sha256_verified": true
+    },
+    {
+      "path": "models/Xenova/all-MiniLM-L6-v2/README.upstream.md",
+      "source_url": "https://huggingface.co/Xenova/all-MiniLM-L6-v2/resolve/751bff37182d3f1213fa05d7196b954e230abad9/README.md",
+      "bytes": 1767,
+      "sha256": "63ea99bf681a2e9eda4f6a537d5ed8fda95d1677111656da37e9cfd080c3af02",
+      "expected_size_verified": false,
+      "expected_sha256_verified": false
+    },
+    {
+      "path": "vendor/licenses/transformers-LICENSE.txt",
+      "source_url": "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "expected_size_verified": true,
+      "expected_sha256_verified": false
+    },
+    {
+      "path": "vendor/licenses/jinja-LICENSE.txt",
+      "source_url": "https://cdn.jsdelivr.net/npm/@huggingface/jinja@0.5.3/LICENSE",
+      "bytes": 1069,
+      "sha256": "d6e7b19451c1b3d1d66353bb4b1274138953b3bfd9ae60c56e77b1f548796982",
+      "expected_size_verified": true,
+      "expected_sha256_verified": false
+    },
+    {
+      "path": "vendor/licenses/onnxruntime-LICENSE.txt",
+      "source_url": "https://raw.githubusercontent.com/microsoft/onnxruntime/89f8206ba4/LICENSE",
+      "bytes": 1073,
+      "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c",
+      "expected_size_verified": true,
+      "expected_sha256_verified": false
+    },
+    {
+      "path": "vendor/licenses/onnxruntime-ThirdPartyNotices.txt",
+      "source_url": "https://raw.githubusercontent.com/microsoft/onnxruntime/89f8206ba4/ThirdPartyNotices.txt",
+      "bytes": 326866,
+      "sha256": "e9e90971a8e75a9a8ac0c6412e29c1202d079998389915aa485f46c816c3b4cc",
+      "expected_size_verified": true,
+      "expected_sha256_verified": false
+    }
+  ]
+}

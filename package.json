@@ -1,0 +1,1 @@
+{"name":"echo-cabinet","version":"1.0.0","private":true,"type":"module","description":"A local semantic lantern for fictional letters and personal text archives.","scripts":{"test":"node --test search-core.test.mjs"},"license":"MIT"}

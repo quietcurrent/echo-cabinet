@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#13251f">
+  <meta name="description" content="A small, private semantic archive. Find the memory behind the words with an open AI model that runs in your browser.">
+  <title>Echo Cabinet — a lantern for lost words</title>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <header class="masthead">
+    <a class="wordmark" href="./" aria-label="Echo Cabinet home"><span class="mark">e<span>c</span></span><span>ECHO CABINET<small>A LANTERN FOR LOST WORDS</small></span></a>
+    <nav aria-label="Page navigation"><a href="#cabinet">The archive</a><a href="#about">How it works</a><span class="local-badge"><i></i> Local by design</span></nav>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="title">
+      <div class="intro">
+        <p class="eyebrow">FIELD EXPERIMENT 001 · GHOST IN THE MACHINE</p>
+        <h1 id="title">Some words fade.<br><em>The feeling stays.</em></h1>
+        <p class="lede">You remember what a letter <em>meant</em>, but not what it said. Light a small AI lantern and follow that feeling back to the words.</p>
+        <div class="search-panel">
+          <label for="query">WHAT ARE YOU TRYING TO REMEMBER?</label>
+          <form id="search-form">
+            <input id="query" maxlength="300" autocomplete="off" placeholder="Someone waiting for a person who never returns…" aria-describedby="search-hint">
+            <button id="search-button" class="search-button" type="submit" disabled aria-label="Search the archive">↗</button>
+          </form>
+          <p id="search-hint">Describe the idea. The words don’t have to match.</p>
+          <div class="prompts" aria-label="Example searches"><button data-query="A person waiting for someone who will never return">an unfinished goodbye</button><button data-query="A sailor navigating through dangerous weather">lost at sea</button><button data-query="Someone keeping a garden alive during winter">something still growing</button></div>
+        </div>
+        <div class="engine-box">
+          <div class="engine-line"><span id="engine-status" role="status" aria-live="polite">The lantern is unlit</span><span class="engine-size">OPEN MODEL · 46 MB</span></div>
+          <button id="load-model" class="primary-button">Light the lantern <span>↗</span></button>
+          <progress id="load-progress" max="100" value="0" hidden aria-label="Loading local AI model"></progress>
+          <p id="engine-detail">One initial download. Inference stays in this browser. No account or API key.</p>
+        </div>
+      </div>
+      <aside class="lantern-scene" aria-label="An illustrated lantern illuminating a cabinet of letters">
+        <div class="scene-number">ARCHIVE / 00<span id="scene-count">8</span></div>
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="floating-note note-one"><span>14 OCTOBER, 1891</span><p>“I still set two cups<br>on the table.”</p><i>— The blue envelope</i></div>
+        <div class="floating-note note-two"><span>FRAGMENT № 06</span><p>The garden<br>remembers.</p><i>Filed under: hope</i></div>
+        <svg class="lantern" viewBox="0 0 240 330" role="img" aria-label="A glowing brass lantern"><defs><radialGradient id="a"><stop stop-color="#ffd892" stop-opacity=".8"/><stop offset="1" stop-color="#e6aa58" stop-opacity="0"/></radialGradient><linearGradient id="b" x2="1" y2="1"><stop stop-color="#e9bf7b"/><stop offset=".5" stop-color="#997349"/><stop offset="1" stop-color="#e0b372"/></linearGradient></defs><ellipse cx="120" cy="205" rx="115" ry="120" fill="url(#a)"/><path d="M86 68V45a34 34 0 0 1 68 0v23" fill="none" stroke="#caa46c" stroke-width="7"/><path d="m79 91 13-27h56l13 27 19 17H60z" fill="url(#b)"/><path d="M69 116h102l-10 155H79z" fill="#ffcf79" fill-opacity=".13" stroke="#c6a174" stroke-width="2"/><path d="m86 115 7 155m61-155-7 155M120 116v155" stroke="#c6a174" stroke-width="4"/><path d="M112 241c-23-24 16-43 8-70 28 28 32 48 13 70z" fill="#ffe9b5"/><path d="M115 239c-7-14 9-21 10-35 10 15 9 28 3 35" fill="#fffbe8"/><rect x="101" y="241" width="38" height="18" rx="4" fill="#946a3b"/><path d="m78 271-14 14v12h112v-12l-14-14z" fill="url(#b)"/><rect x="55" y="297" width="130" height="10" rx="5" fill="#b9915e"/></svg>
+        <p class="scene-caption">A semantic séance.<br><span>Evidence, not invented voices.</span></p>
+        <span class="scene-axis">MEANING → MEMORY</span>
+      </aside>
+    </section>
+    <section class="results-section" id="results" aria-labelledby="results-title" hidden>
+      <div class="section-heading"><div><p class="eyebrow">FOLLOW THE LIGHT</p><h2 id="results-title">The closest echoes</h2></div><span id="search-time" class="fine-print"></span></div>
+      <p id="results-context" class="section-note" aria-live="polite"></p>
+      <div id="results-list"></div>
+      <p class="caution">Similarity is a ranking signal, not a probability or proof. The cabinet can retrieve a passage; it cannot know an author’s intent.</p>
+    </section>
+    <section id="cabinet" class="cabinet-section" aria-labelledby="cabinet-title">
+      <div class="section-heading"><div><p class="eyebrow">THE READING ROOM</p><h2 id="cabinet-title">Every ghost has a source.</h2></div><label class="upload-button" for="files">＋ Add your own letters<input type="file" id="files" accept=".txt,.md,text/plain,text/markdown" multiple></label></div>
+      <div class="archive-meta"><p id="archive-note">Eight fictional letters, written for this experiment. No historical claims.</p><button id="restore-samples" hidden>Restore fictional archive</button></div>
+      <p id="file-status" class="section-note" role="status"></p>
+      <div class="document-grid" id="document-grid"></div>
+      <p class="fine-print">Local imports: .txt or .md, up to 8 files, 12,000 characters each and 40,000 total. Imports replace the sample archive and disappear when you reload. They are never uploaded.</p>
+    </section>
+    <section class="about-section" id="about" aria-labelledby="about-title">
+      <p class="eyebrow">OPEN THE DRAWER</p><h2 id="about-title">A little machine.<br>A traceable kind of magic.</h2>
+      <div class="about-grid"><article><span>01 / EMBED</span><h3>Give meaning a shape.</h3><p>The open-weight MiniLM model turns your question and each passage into vectors. It runs locally with Transformers.js and ONNX WebAssembly.</p></article><article><span>02 / COMPARE</span><h3>Find a nearby memory.</h3><p>Cosine similarity ranks passages by semantic closeness. Searching “an unfinished goodbye” can find a letter that never uses those exact words.</p></article><article><span>03 / READ</span><h3>Keep the source in view.</h3><p>Each result is an exact passage with a title and character offsets. There is no generated answer, séance persona, or reconstructed author’s voice.</p></article></div>
+      <details><summary>Privacy, downloads & limitations</summary><div><p>Your queries and imported text stay in this tab. This app has no analytics or server API. Its static host receives ordinary page and asset requests, including the initial model download. A service worker caches the app and model for offline reuse when browser storage permits.</p><p>The bundled model is English-oriented. Its rankings can be wrong or unhelpful, especially for negation, uncommon names, long passages or other languages. We split text into overlapping passages; these are retrieval results, not factual verification.</p><p>The model and runtime are pinned and served alongside the app. You can inspect the source, checksums and licenses. Browser storage may be cleared or evicted; offline availability then requires another download.</p><button id="clear-cache">Clear this app’s offline cache</button><span id="cache-status" role="status"></span></div></details>
+    </section>
+  </main>
+  <footer><span>QUIET CURRENT <i>×</i> ECHO CABINET</span><p>Built for Ghost in the Machine · 2026</p><a id="source-link" href="https://github.com/quietcurrent/echo-cabinet">Source & licenses ↗</a></footer>
+  <dialog id="letter-dialog"><button class="close-dialog" aria-label="Close letter">×</button><p id="dialog-meta" class="eyebrow"></p><h2 id="dialog-title"></h2><p id="dialog-text"></p><p class="fine-print">Exact archive text · no generated additions</p></dialog>
+</body>
+</html>
